@@ -186,6 +186,16 @@ document.getElementById('fontSizeInput').addEventListener('change',function(){
     document.getElementById('text-field').style.fontSize = document.getElementById('fontSizeInput').value + 'px';
 })
 
+document.getElementById('caseFormat').addEventListener('click', function(){
+    const caseFormatBtn = document.getElementById('caseFormat');
+    caseFormatBtn.classList.toggle('btn');
+    caseFormatBtn.classList.toggle('btn-square');
+    caseFormatBtn.classList.toggle('btn-error');
+    caseFormatBtn.classList.toggle('btn-sm');
+
+    textField.classList.toggle('uppercase');
+})
+
 document.getElementById('text-color').addEventListener('change', function(){
     document.getElementById('text-field').style.color = document.getElementById('text-color').value;
 })
