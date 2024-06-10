@@ -85,7 +85,7 @@ document.getElementById('AlignLeft').addEventListener('click', function () {
 
     document.getElementById('AlignCenter').setAttribute('class', 'fa-solid fa-align-center p-2');
     document.getElementById('AlignRight').setAttribute('class', 'fa-solid fa-align-right p-2');
-    document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify p-2');
+    document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify hidden lg:block p-2');
 
 
     textField.classList.remove('text-center');
@@ -111,7 +111,7 @@ document.getElementById('AlignCenter').addEventListener('click', function () {
 
     document.getElementById('AlignLeft').setAttribute('class', 'fa-solid fa-align-left p-2');
     document.getElementById('AlignRight').setAttribute('class', 'fa-solid fa-align-right p-2');
-    document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify p-2');
+    document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify hidden lg:block p-2');
 
     textField.classList.remove('text-left');
     textField.classList.remove('text-right');
@@ -137,7 +137,7 @@ document.getElementById('AlignRight').addEventListener('click', function () {
 
     document.getElementById('AlignLeft').setAttribute('class', 'fa-solid fa-align-left p-2');
     document.getElementById('AlignCenter').setAttribute('class', 'fa-solid fa-align-center p-2');
-    document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify p-2');
+    document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify hidden lg:block p-2');
 
     textField.classList.remove('text-left');
     textField.classList.remove('text-center');
