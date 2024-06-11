@@ -1,6 +1,6 @@
 const textField = document.getElementById('text-field');
 
-document.getElementById('boldBtn').addEventListener('click',function(){
+document.getElementById('boldBtn').addEventListener('click', function () {
     const boldBtn = document.getElementById('boldBtn');
     boldBtn.classList.toggle('btn');
     boldBtn.classList.toggle('btn-square');
@@ -87,10 +87,12 @@ document.getElementById('AlignLeft').addEventListener('click', function () {
     document.getElementById('AlignRight').setAttribute('class', 'fa-solid fa-align-right p-2');
     document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify hidden lg:block p-2');
 
+    if (textField.classList.contains('text-center') || textField.classList.contains('text-right') || textField.classList.contains('text-justify')) {
+        textField.classList.remove('text-center');
+        textField.classList.remove('text-right');
+        textField.classList.remove('text-justify');
+    }
 
-    textField.classList.remove('text-center');
-    textField.classList.remove('text-right');
-    textField.classList.remove('text-justify');
     textField.classList.toggle('text-left');
     /* const textField = document.getElementById('text-field');
     console.log('global block');
@@ -113,11 +115,14 @@ document.getElementById('AlignCenter').addEventListener('click', function () {
     document.getElementById('AlignRight').setAttribute('class', 'fa-solid fa-align-right p-2');
     document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify hidden lg:block p-2');
 
-    textField.classList.remove('text-left');
-    textField.classList.remove('text-right');
-    textField.classList.remove('text-justify');
+    if (textField.classList.contains('text-left') || textField.classList.contains('text-right') || textField.classList.contains('text-justify')) {
+        textField.classList.remove('text-left');
+        textField.classList.remove('text-right');
+        textField.classList.remove('text-justify');
+    }
+
     textField.classList.toggle('text-center');
-    
+
     /* const textField = document.getElementById('text-field');
     console.log('global block');
     console.log(textField.style.textAlign);
@@ -139,9 +144,12 @@ document.getElementById('AlignRight').addEventListener('click', function () {
     document.getElementById('AlignCenter').setAttribute('class', 'fa-solid fa-align-center p-2');
     document.getElementById('AlignJustify').setAttribute('class', 'fa-solid fa-align-justify hidden lg:block p-2');
 
-    textField.classList.remove('text-left');
-    textField.classList.remove('text-center');
-    textField.classList.remove('text-justify');
+   if (textField.classList.contains('text-left') || textField.classList.contains('text-center') || textField.classList.contains('text-justify')) {
+        textField.classList.remove('text-left');
+        textField.classList.remove('text-center');
+        textField.classList.remove('text-justify');
+    }
+
     textField.classList.toggle('text-right');
 
 
@@ -165,12 +173,16 @@ document.getElementById('AlignJustify').addEventListener('click', function () {
     document.getElementById('AlignLeft').setAttribute('class', 'fa-solid fa-align-left p-2');
     document.getElementById('AlignCenter').setAttribute('class', 'fa-solid fa-align-center p-2');
     document.getElementById('AlignRight').setAttribute('class', 'fa-solid fa-align-right p-2');
-    textField.classList.remove('text-left');
-    textField.classList.remove('text-center');
-    textField.classList.remove('text-right');
+
+    if (textField.classList.contains('text-left') || textField.classList.contains('text-center') || textField.classList.contains('text-right')) {
+        textField.classList.remove('text-left');
+        textField.classList.remove('text-center');
+        textField.classList.remove('text-right');
+    }
+
     textField.classList.toggle('text-justify');
-    
-    
+
+
     /* const textField = document.getElementById('text-field');
     console.log('global block');
     console.log(textField.style.textAlign);
@@ -182,11 +194,11 @@ document.getElementById('AlignJustify').addEventListener('click', function () {
 
 document.getElementById('fontSizeInput').classList.add('font-bold');
 
-document.getElementById('fontSizeInput').addEventListener('change',function(){
+document.getElementById('fontSizeInput').addEventListener('change', function () {
     document.getElementById('text-field').style.fontSize = document.getElementById('fontSizeInput').value + 'px';
 })
 
-document.getElementById('caseFormat').addEventListener('click', function(){
+document.getElementById('caseFormat').addEventListener('click', function () {
     const caseFormatBtn = document.getElementById('caseFormat');
     caseFormatBtn.classList.toggle('btn');
     caseFormatBtn.classList.toggle('btn-square');
@@ -196,7 +208,7 @@ document.getElementById('caseFormat').addEventListener('click', function(){
     textField.classList.toggle('uppercase');
 })
 
-document.getElementById('text-color').addEventListener('change', function(){
+document.getElementById('text-color').addEventListener('change', function () {
     document.getElementById('text-field').style.color = document.getElementById('text-color').value;
 })
 
